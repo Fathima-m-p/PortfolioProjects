@@ -14,7 +14,7 @@ from PortfolioProject1..CovidDeath
 where location like  '%ndia%'
 order by 1,2
 
---Looking at the total Cases vs total population
+--Looking at the total Cases vs total population in India
 
 
 --Percentage of Poplulation got covid
@@ -25,7 +25,7 @@ from PortfolioProject1..CovidDeath
 where location like  '%ndia%'
 order by 5 desc
 
---Looking at Highest Infection Rate 
+--Looking at Highest Infection Rate Globally
 
 
 Select Location, population, MAX(total_cases)as Highest_Infection_Count, MAX((total_cases/population)*100) as Highest_Percentage_of_people_infected
@@ -46,7 +46,7 @@ where continent <>''
 Group by location
 Order by Total_Death_Count desc
 
--- break by continents
+
 
 
 --Showing continents with highest death count
@@ -80,7 +80,7 @@ where death.continent<>''
 order by 2,3
 
 
---USing CTE
+--Using CTE
 with PopvsVac (Continent, location, date, population,new_vaccinations,RollingPeopleVaccinated)
 as
 (
